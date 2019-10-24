@@ -8,26 +8,28 @@
 // IT allows us to do a alot of things inside the Functional comps, which could only be done in the class based comps.
 // Things like use state and tap into life cycle methods which could only be done in class based comps
 // ======================================================================================================
- 
+
 // Combining Context and Hooks together gives us a nice to work with shared data inside our app
 // It provides a REDUX-LIKE state mgt magic wtout having to install any third party library
-import React from 'react';
+import React from "react";
 
-import './App.css';
-import Navbar from './components/Navbar';
-import Booklist from './components/Booklist';
-import ThemeUiProvider from './contexts/ThemeUi';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Booklist from "./components/Booklist";
+import ThemeUiProvider from "./contexts/ThemeUi";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
-  return (
-    <div className="App">
-      {/* When the context Provider wraps the comps, the comps so wrapped are now attached as 'props' to d Provider */}
-      <ThemeUiProvider><Navbar />
-        <Booklist /></ThemeUiProvider>
-
-     
-    </div>
-  );
+	return (
+		<div className="App">
+			{/* When the context Provider wraps the comps, the comps so wrapped are now attached as 'props' to d Provider */}
+			<ThemeUiProvider>
+				<Navbar />
+				<Booklist />
+				<ThemeToggle />
+			</ThemeUiProvider>
+		</div>
+	);
 }
 
 export default App;
