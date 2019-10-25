@@ -18,15 +18,27 @@ import Navbar from "./components/Navbar";
 import Booklist from "./components/Booklist";
 import ThemeUiProvider from "./contexts/ThemeUi";
 import ThemeToggle from "./components/ThemeToggle";
+import AuthContextProvider from "./contexts/AuthContext";
+import Booklist1 from "./components/Booklist1";
+import Booklist2 from "./components/Booklist2";
+import Navbar2 from "./components/Navbar2";
+import BookContextProvider from "./contexts/BookContext";
 
 function App() {
 	return (
 		<div className="App">
 			{/* When the context Provider wraps the comps, the comps so wrapped are now attached as 'props' to d Provider */}
 			<ThemeUiProvider>
-				<Navbar />
-				<Booklist />
-				<ThemeToggle />
+				<AuthContextProvider>
+					<Navbar />
+					<Navbar2 />
+					<BookContextProvider>
+						<Booklist1 />
+					</BookContextProvider>
+					{/* <Booklist /> */}
+					{/* <Booklist2 /> */}
+					<ThemeToggle />
+				</AuthContextProvider>
 			</ThemeUiProvider>
 		</div>
 	);
