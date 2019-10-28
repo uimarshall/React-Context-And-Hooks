@@ -2,7 +2,7 @@
 // 1. Create context - The context should provide data to its children
 // 2. Define the data you want to transmit in the state - you can use 'useState hooks'
 // 3. Create the context.Provider in the class or comp you want to export
-// 4. The 'value' pty of the anycontext.Provider houses the data you want to transmit
+// 4. The 'value' pty of the anycontext.Provider houses the data you want to transmit i.e. d state is passed to d value pty
 // 5. You can create funcs and pass them as props to the children of the 'Provider' to drive services
 // from the Provider to its children in comp folder, services such as add, delete, crud etc.
 import React, { createContext, useState } from "react";
@@ -15,7 +15,7 @@ const MovieContextProvider = props => {
 		{ title: "Avatar", producer: "Sepp Baltter", id: 3 }
 	]);
 	const addMovie = (title, producer) => {
-		// set the movie from the state obj to what we receive from the addMovie func.
+		// set the movies from the state obj to what we receive from the addMovie func in NewMovieForm.
 		setMovie([...movies, { title: title, producer: producer, id: uuid() }]);
 	};
 	const removeMovie = id => {

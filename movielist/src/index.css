@@ -5,7 +5,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: #553055;
+	background: #505763;
 }
 
 .App {
@@ -31,7 +31,7 @@ body {
 	list-style-type: none;
 }
 .movie-list li {
-	background: #6d3d6d;
+	background: #992337;
 	border-radius: 4px;
 	padding: 10px;
 	cursor: pointer;
@@ -53,4 +53,28 @@ body {
 .empty {
 	margin: 20px;
 	text-align: center;
+}
+form {
+	padding: 20px;
+}
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 6px 0;
+	background: #e9f7f1;
+	color: #000;
+	border: 0;
+	border-radius: 25px;
+}
+
+input[type="submit"] {
+	width: 50%;
+	margin: 10px auto;
+	background: #eee;
+	border: 0;
+	padding: 6px 20px;
+	display: block;
+	font-weight: bold;
+	border-radius: 25px;
 }
