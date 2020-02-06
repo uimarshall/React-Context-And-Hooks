@@ -14,6 +14,7 @@ const MovieContextProvider = props => {
 	// We will use the 'movieReducer' to manage the state
 	const [movies, dispatch] = useReducer(movieReducer, [], () => {
 		const localData = localStorage.getItem("movies");
+		// The value of what the func returns, will be the initial value of the books in 1st render
 		// The callback func updates the 'movies' wt content of the localStorage
 		return localData ? JSON.parse(localData) : [];
 	});
@@ -27,8 +28,9 @@ const MovieContextProvider = props => {
 	return (
 		// All the comps consuming this context will hv access to 'dispatch' mtd to dispatch actns
 		<MovieContext1.Provider value={{ movies, dispatch }}>
-			{/* 'props.children' refers to the 'comps' that 'MovieContextProvider' will wrap. */}
-			{props.children}
+			{" "}
+			{/* 'props.children' refers to the 'comps' that 'MovieContextProvider' will wrap. */}{" "}
+			{props.children}{" "}
 		</MovieContext1.Provider>
 	);
 };
